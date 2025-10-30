@@ -1,0 +1,32 @@
+site_name: Forgotten Quest
+repo_url: https://github.com/LadyOfPain/forgotten-quest/
+site_description: Do you remember?
+site_author: The Lady of Pain
+
+theme:
+  name: material
+
+nav:
+  - Quest: index.md
+
+not_in_nav: |
+  /dragon's-eye.png
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - smarty
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+validation:
+  links:
+    absolute_links: ignore
+    anchors: ignore
+
+plugins:
+  - pub-obsidian:
+      backlinks: 
+        enabled: false
